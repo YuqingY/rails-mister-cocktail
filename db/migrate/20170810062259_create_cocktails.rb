@@ -3,7 +3,6 @@ class CreateCocktails < ActiveRecord::Migration[5.1]
     create_table :cocktails do |t|
       t.string :name
       t.string :description
-      t.integer :rating
 
       t.timestamps
     end
