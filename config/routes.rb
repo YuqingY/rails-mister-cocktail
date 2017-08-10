@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'ingredients/index'
 
   get 'ingredients/show'
@@ -17,5 +18,10 @@ Rails.application.routes.draw do
 
   get 'doses/destroy'
 
+=======
+  resources :cocktails do
+    resources :doses
+  end
+>>>>>>> f5d35878c225fcb0d0abc4caa666ff4ba5635dc3
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
