@@ -24,6 +24,8 @@ class DosesController < ApplicationController
   end
 
   def update
+    @dose = Dose.find(params[:id])
+    @cocktail = @dose.cocktail
     if @dose.update(dose_params)
       redirect_to cocktail_path(@dose.cocktail), notice: 'Dose was successfully updated.'
     else
@@ -33,6 +35,7 @@ class DosesController < ApplicationController
 
   def edit
     @dose = Dose.find(params[:id])
+    @cocktail = @dose.cocktail
   end
 
   def destroy
@@ -47,6 +50,6 @@ class DosesController < ApplicationController
 
 
   def dose_params
-    params.require(:dose).permit(:amount_needed, :cocktail_id, :ingredient_id)
+    params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
   end
 end
