@@ -8,13 +8,14 @@ class DosesController < ApplicationController
   end
 
   def show
-    @dose = Dse.find(params[:id])
+    @dose = Dose.find(params[:id])
   end
 
   def create
     @dose = Dose.new(dose_params)
     if @dose.save
       redirect
+    end
   end
 
   def update
