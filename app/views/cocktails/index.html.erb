@@ -1,23 +1,19 @@
-<%= render 'shared/banner' %>
-<div class="container">
-  <div class='header'>
-    <h1>All Cocktails</h1>
+
+<%= render "shared/banner" %>
+<div class=“container”>
+  <div class=‘header’>
+    <h1>Cocktails</h1>
   </div>
-  <div class="cards">
-    <% Cocktail.all.each do |cocktail| %>
-      <div class="card">
-        <h2><%= cocktail.name %></h2>
-        <h4><span class="button"><%= link_to "Show", cocktail_path(cocktail)%></span> | <span class='button'><%= link_to "Edit", edit_cocktail_path(cocktail) %></span> | <span class='button'><%= link_to 'Delete', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></span></h4>
-        <p><%= cocktail.description%></p>
-      </div>
-    <% end %>
+
+  <div id="app" class="container">
+
+    <%= render Cocktail.all %>
+
   </div>
-  <div class="single-item">
-  <div>your content</div>
-  <div>your content</div>
-  <div>your content</div>
-</div>
+
   <div class="footer">
     <h4><span class="button"><%= link_to "Add New Cocktail", new_cocktail_path%></span></h4>
   </div>
+
+
 </div>
