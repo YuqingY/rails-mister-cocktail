@@ -63,3 +63,19 @@ body {
     padding-bottom: 6px;
 }
 
+.cocktail {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.destext {
+  width: 400px;
+  margin-left: 30px;
+  margin-top: 0
+}
+

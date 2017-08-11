@@ -1,5 +1,6 @@
-
+<%= link_to cocktail_path(cocktail) do %>
  <card data-image='<%= cl_image_path cocktail.photo.path, crop: :fill %>'>
   <h1 slot="header"><%= cocktail.name %></h1>
   <p slot="content"><%= cocktail.description%></p>
 </card>
+<% end %>
