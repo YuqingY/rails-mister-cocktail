@@ -15,9 +15,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-<<<<<<< HEAD
-//= require_tree ./sitewide
-=======
-//= require jquery.slick
 //= require_tree .
->>>>>>> 54c9aa65aa84ebc98b2f2e2eaa98517ffb69c397
