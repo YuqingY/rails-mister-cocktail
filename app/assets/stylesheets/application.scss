@@ -13,7 +13,31 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "components/card";
 
 .banner {
   background-size: contain;
 }
+
+
+
+// .card-link{
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0;
+//   color: black;
+//   background-color: black;
+// }
+// .card-link:hover{
+//   opacity: 0.1;
+// }
+
+// .button {
+//   font-style: none;
+//   color: rgb(0,0,0);
+// }
+

@@ -4,11 +4,14 @@
     <h1><%= @cocktail.name %></h1>
     <h4><span class='button'><%= link_to "Edit Info", edit_cocktail_path(@cocktail) %></span> | <span class="button"><%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail) %></span> | <span class='button'><%= link_to 'Delete', @cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></span></h4>
   </div>
+  <div class="image">
+    <%= cl_image_tag @cocktail.photo, height: 400, width: 300, crop: :fill %>
+  </div>
   <div>
     <p><%= @cocktail.description%></p>
   </div>
   <% @cocktail.doses.each do |dose| %>
-      <div class="card">
+      <div class="ingredient">
         <h2><%= dose.ingredient.name %> | <%= dose.description %></h2>
         <h5><span class="button"><%= link_to "Edit dose", edit_cocktail_dose_path(@cocktail, dose) %></span> | <span class="button"><%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %></span></h5>
         <p><%= dose.ingredient.description %></p>
